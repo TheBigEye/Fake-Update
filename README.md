@@ -36,6 +36,3 @@ To use this locally:
 
 ## Contributing
 Contributions to improve and enhance the website are welcome! If you have ideas for additional features or improvements, feel free to submit a pull request.
-
-## License
-This repository is licensed under the [MIT License](LICENSE).
