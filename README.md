@@ -1,6 +1,8 @@
 # Fake Windows Update Prank
 Play a funny prank on your friends by mimicking the Windows update. After the update, a fake Blue Screen of Death will appear, giving you a chance to reveal the prank! This repository contains a simple prank website that allows you to simulate a Windows update process and surprise your friends.
 
+This repository is inspired by https://github.com/dartzcn/fakeupdate
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Usage](#usage)
