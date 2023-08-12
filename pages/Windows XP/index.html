@@ -1,119 +1,119 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-    <title>Windows XP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <style>
-        body {
-            background: url('./images/background.png') #054696 no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-            text-align:center;
-            vertical-align:middle;
-            z-index: -1;
-            margin:0;
-            padding:0;
-            cursor: url('./images/cursor.png'), auto;
-        }
-
-        .counter_text {
-            position: absolute;
-            top: 63.3%;
-            height: 46px;
-            margin-left:auto;
-            margin-right:auto;
-            display:block;
-            width:520px;
-            margin-top: -5%;
-            font-family:Tahoma, Arial;
-            font-size:20px;
-            color:#fff;
-            font-weight:normal;
-            text-align:right;
-            user-select: none;
-        }
-
-        .footer_image {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            width: 50%;
-            margin: -5% 0 0 -25%;
-        }
-
-        p {
-            display:block;
-            float:middle;
-            text-align:right;
-            width:100%;
-        }
-
-        .centeragain {
-            width:520px;
-            margin:0px auto;
-            text-align:left;
-        }
-
-        .messageBox {
-            display:block;
-            color:#67A2E6;
-            font-family:Segoe UI, Arial;
-            font-size:20px;
-            margin-left:auto;
-            margin-right:auto;
-            text-align:right;
-            user-select: none;
-            z-index: 999;
-        }
-
-        #blackscreen, #bluescreen {
-            display: none;
-        }
-
-        #blackimage, #blueimage {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            height: 100%;
-        }
-    </style>
-    <script>
-        let count = 0;
-
-        const interval = setInterval(() => {
-            document.getElementById("advice").innerText = "Do not turn off or unplug your computer.";
-
-            count = count + 1;
-            document.getElementById("timer").innerText = `${count}%`;
-            if (count >= 100) {
-                document.getElementById("timer").innerText = "";
-                document.getElementById("ref").innerText = "Updates Complete.";
-                document.getElementById("timer").style.display = "none";
-                setTimeout(() => {
-                    document.getElementById("bluescreen").style.display = "block";
-                }, 1000);
+    <head>
+        <title>Windows XP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <style>
+            body {
+                background: url('./images/background.png') #054696 no-repeat center center fixed;
+                background-size: cover;
+                overflow: hidden;
+                text-align: center;
+                vertical-align: middle;
+                z-index: -1;
+                margin: 0;
+                padding: 0;
+                cursor: url('./images/cursor.png'), auto;
             }
-        }, 14800);
-    </script>
-</head>
 
-<body>
-    <div style="display: block; position: absolute; min-width: 100%; min-height: 100%; margin: 0; padding: 0;">
-        <div class="centeragain">
-            <div class="counter_text">
-                <a id="ref">Installing Windows Updates... </a> <a id="timer">0%</a> <br>
-                <a id="advice">Do not turn off or unplug your computer.</a><br>
-                <div class="footer_image">
-                    <img src="./images/footer.png" draggable="false" ondragstart="return false;">
+            .counter-container {
+                position: absolute;
+                top: 63.3%;
+                height: 46px;
+                margin: auto;
+                width: 520px;
+                margin-top: -5%;
+                font-family: Tahoma, Arial;
+                font-size: 20px;
+                color: #fff;
+                font-weight: normal;
+                text-align: right;
+                user-select: none;
+            }
+
+            .footer-image {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                width: 50%;
+                margin: -5% 0 0 -25%;
+            }
+
+            p {
+                display: block;
+                text-align: right;
+                width: 100%;
+            }
+
+            .centered {
+                width: 520px;
+                margin: 0 auto;
+                text-align: left;
+            }
+
+            .message-box {
+                display: block;
+                color: #67A2E6;
+                font-family: "Segoe UI", Arial;
+                font-size: 20px;
+                margin: auto;
+                text-align: right;
+                user-select: none;
+                z-index: 999;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .fullscreen-image {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 999;
+                height: 100%;
+            }
+        </style>
+
+        <script>
+            let progressCount = 0;
+
+            const updateInterval = setInterval(() => {
+                const adviceElement = document.getElementById("advice");
+                adviceElement.innerText = "Do not turn off or unplug your computer.";
+
+                progressCount = progressCount + 1;
+                document.getElementById("progress").innerText = `${progressCount}%`;
+
+                if (progressCount >= 100) {
+                    document.getElementById("progress").innerText = "";
+                    document.getElementById("status").innerText = "Updates Complete.";
+                    document.getElementById("progress").style.display = "none";
+                    setTimeout(() => {
+                        document.getElementById("bluescreen").style.display = "block";
+                    }, 1000);
+                }
+            }, 14800);
+        </script>
+    </head>
+
+    <body>
+        <div style="display: block; position: absolute; min-width: 100%; min-height: 100%; margin: 0; padding: 0;">
+            <div class="centered">
+                <div class="counter-container">
+                    <a id="status">Installing Windows Updates... </a> <a id="progress">0%</a> <br>
+                    <a id="advice">Do not turn off or unplug your computer.</a><br>
+                    <div class="footer-image">
+                        <img src="./images/footer.png" draggable="false" ondragstart="return false;">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="blackscreen"><img id="blackimage" src="./images/blackscreen.png"></div><br>
-    <div id="bluescreen"><img id="blueimage" src="./images/bluescreen.png"></div><br>
-</body>
+        <div class="hidden" id="blackscreen"><img class="fullscreen-image" src="./images/blackscreen.png"></div><br>
+        <div class="hidden" id="bluescreen"><img class="fullscreen-image" src="./images/bluescreen.png"></div><br>
+    </body>
 </html>
