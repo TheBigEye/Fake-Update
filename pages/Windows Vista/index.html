@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windows Vista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        body {
+            background: url('./images/background.png') #054696 no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            cursor: url('./images/cursor.png'), auto;
+        }
+
+        .counter_text {
+            position: absolute;
+            top: 43.7%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 550px;
+            font-family: Segoe UI, Arial;
+            font-size: 23px;
+            color: #fff;
+            text-align: center;
+            user-select: none;
+        }
+
+        .footer_image {
+            position: absolute;
+            bottom: 17px;
+            left: 38.5%;
+            width: 50%;
+        }
+
+        .messageBox {
+            display: block;
+            color: #67A2E6;
+            font-family: Segoe UI, Arial;
+            font-size: 20px;
+            text-align: center;
+            user-select: none;
+            z-index: 999;
+        }
+
+        #blackscreen, #bluescreen {
+            display: none;
+        }
+
+        #blackimage, #blueimage {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            height: 100%;
+        }
+    </style>
+    <script>
+        let count = 0;
+        let phase = 1;
+        let update = 1
+
+        const interval = setInterval(() => {
+            document.getElementById("advice").innerText = "Do not turn off your computer.";
+
+            count += 1;
+            document.getElementById("timer").innerText = `${count}%`;
+            if (count >= 100) {
+                if (phase === 1) {
+                    phase = 2;
+                    document.getElementById("ref").innerText = "Configuring updates: Stage 2 of 3 - ";
+                    count = 0;
+
+                } else if (phase === 2) {
+                    phase = 3;
+                    document.getElementById("ref").innerText = "Configuring updates: Stage 3 of 3 - ";
+                    count = 0;
+
+                }  else if (phase === 3) {
+                    if (update <= 67) {
+                        count = 0;
+                        update += 1;
+                        document.getElementById("ref").innerText = "Installing update "  + `${update}` + " of 68 - ";
+                    } else {
+                        document.getElementById("timer").innerText = "";
+                        document.getElementById("ref").style.display = "none";
+                        document.getElementById("timer").style.display = "none";
+                        document.getElementById("complete").style.display = "block";
+                        setTimeout(() => {
+                            document.getElementById("bluescreen").style.display = "block";
+                        }, 1000);
+                    }
+                }
+            }
+        }, 4380);
+    </script>
+</head>
+
+<body>
+    <div style="display: block; position: absolute; min-width: 100%; min-height: 100%; margin: 0; padding: 0;">
+        <div class="centeragain">
+            <div class="counter_text">
+                <img src="./images/loading.gif" style="vertical-align:middle;padding-top:25px;float:left;" draggable="false" ondragstart="return false;">
+                <a id="ref">Configuring updates: Stage 1 of 3 - </a> <a id="timer">0%</a> <span>complete.</span> <br>
+                <a id="advice">Do not turn off your computer.</a><br>
+                <div id="complete" style="display: none;">Updates Complete.</div>
+            </div>
+        </div>
+        <div class="footer_image">
+            <img src="./images/footer.png" draggable="false" ondragstart="return false;">
+        </div>
+    </div>
+
+    <div id="blackscreen"><img id="blackimage" src="./images/blackscreen.png"></div><br>
+    <div id="bluescreen"><img id="blueimage" src="./images/bluescreen.png"></div><br>
+</body>
+</html>

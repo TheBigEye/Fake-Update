@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windows Update Prank</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        body {
+            color: #333;
+            font-family: "MS Sans Serif", Geneva, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            cursor: url('./assets/cursor.png'), default;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #007fff;
+            text-decoration: none;
+            cursor: url('./assets/hand.png'), pointer;
+        }
+
+        a:hover {
+            color: #333399;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .prank-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .prank-option {
+            margin: 0 20px;
+        }
+
+        .prank-image-container {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .prank-option:hover .prank-image-container {
+            transform: scale(1.1);
+        }
+
+        .prank-image {
+            padding: 12px;
+            width: 87%;
+            height: 77%;
+            transition: all 0.1s;
+        }
+
+        .prank-option:hover .prank-image {
+            transform: scale(1);
+        }
+
+        .prank-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: url('./assets/hand.png'), pointer;
+        }
+
+        .prank-title {
+            font-weight: bold;
+        }
+
+       /* Agrega estilos para el footer */
+       .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .heart-icon {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-right: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Fake Windows Update</h2>
+        <p>Play a funny prank on your friends by mimicking the Windows update or welcome screen.</p>
+        <p>After the update, a fake Blue Screen of Death will appear, giving you a chance to reveal the prank!</p>
+        <p>This site is a clone of <a href="http://fakeupdate.net/">fakeupdate.net</a>.</p>
+        <p>Press <b>F11</b> for full-screen mode.</p>
+        <br><br>
+
+        <!-- First row -->
+        <div class="prank-options">
+            <div class="prank-option">
+                <a href="./pages/Windows XP/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows xp.png" alt="Windows XP">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                    <!-- <p class="prank-title">Windows XP</p> -->
+                </a>
+            </div>
+            <div class="prank-option">
+                <a href="./pages/Windows Vista/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows vista.png" alt="Windows Vista">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                </a>
+            </div>
+            <div class="prank-option">
+                <a href="./pages/Windows 7/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows 7.png" alt="Windows 7">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="prank-options">
+            <div class="prank-option">
+                <a href="./pages/Windows 8/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows 8.png" alt="Windows 8">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                    <!-- <p class="prank-title">Windows XP</p> -->
+                </a>
+            </div>
+            <div class="prank-option">
+                <a href="./pages/Windows 10/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows 10.png" alt="Windows Vista">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                </a>
+            </div>
+            <div class="prank-option">
+                <a href="./pages/Windows 11/index.html">
+                    <div class="prank-image-container">
+                        <img class="prank-image" src="./assets/windows 11.png" alt="Windows 7">
+                        <img class="prank-overlay" src="./assets/monitor.png" alt="Monitor Overlay">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with <img class="heart-icon" src="./assets/heart.png" alt="Heart"> by TheBigEye
+        </div>
+    </div>
+</body>
+</html>
