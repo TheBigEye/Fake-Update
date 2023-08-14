@@ -21,7 +21,7 @@ Picture a scenario: your friend, known for their carefree nature, habitually kee
 4. After the fake update completes, a fake Blue Screen of Death (BSOD) will appear, revealing the prank to your friends.
 
 ## Available Options
-> NOTE: Please note that Windows 8, 10, and 11 update screens are currently under development and not yet available.
+> Please note that Windows 8, 10, and 11 update screens are currently under development and not yet available.
 
 | Windows XP | Windows Vista | Windows 7 |
 |:---:|:---:|:---:|
@@ -32,6 +32,8 @@ Picture a scenario: your friend, known for their carefree nature, habitually kee
 | ![Windows 8 Prank](./assets/windows%208.png) | ![Windows 10 Prank](./assets/windows%2010.png) | ![Windows 11 Prank](./assets/windows%2011.png) |
 
 ## Installation
+> For now, this will not work in very old browsers like Internet Explorer, instead you should use Firefox, Chrome, etc
+
 To use this locally:
 1. Clone this repository to your local machine.
 2. Open the respective HTML file located in the `pages` directory, or open the main `index.html` using any web browser.
