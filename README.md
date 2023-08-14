@@ -10,7 +10,6 @@ This repository is inspired by https://github.com/dartzcn/fakeupdate, and the cl
 - [Prank Options](#prank-options)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 Picture a scenario: your friend, known for their carefree nature, habitually keeps their computer running nonstop. Alternatively, envision finding yourself in a workday lull, grappling with boredom. Here's where creativity strikes. With a stroke of brilliance, you launch your browser and unveil a convincing, albeit fake, prolonged update screen. Patience becomes your ally as the faux update runs its course, eventually culminating in the grand finale – a simulated blue screen of deception, all in the name of injecting a touch of amusement into your day.
