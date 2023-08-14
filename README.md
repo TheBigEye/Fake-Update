@@ -1,7 +1,8 @@
 # Fake Windows Update Prank
-Play a funny prank on your friends by mimicking the Windows update. After the update, a fake Blue Screen of Death will appear, giving you a chance to reveal the prank! This repository contains a simple prank website that allows you to simulate a Windows update process and surprise your friends.
+Pull a Hilarious Prank on Your Friends with a Fake Windows Update and Surprise Blue Screen of Death!.
+Add a touch of fun to your day by hosting the best Windows themed prank. This repository hosts a cleverly designed website that flawlessly replicates the infamous Windows update process, spanning various versions of Windows like XP, Vista, 7, 8, 10, and even 11.
 
-This repository is inspired by https://github.com/dartzcn/fakeupdate and [fakeupdate.net](https://fakeupdate.net)
+This repository is inspired by https://github.com/dartzcn/fakeupdate, and the classic [fakeupdate.net](https://fakeupdate.net)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,7 +13,7 @@ This repository is inspired by https://github.com/dartzcn/fakeupdate and [fakeup
 - [License](#license)
 
 ## Introduction
-This repository contains a simple prank website that mimics the appearance of Windows update screens from various versions of Windows, including Windows XP, Windows Vista, Windows 7, Windows 8, Windows 10, and Windows 11. The prank involves selecting a Windows version and simulating a fake update process, followed by a fake Blue Screen of Death (BSOD) to surprise your friends.
+Picture a scenario: your friend, known for their carefree nature, habitually keeps their computer running nonstop. Alternatively, envision finding yourself in a workday lull, grappling with boredom. Here's where creativity strikes. With a stroke of brilliance, you launch your browser and unveil a convincing, albeit fake, prolonged update screen. Patience becomes your ally as the faux update runs its course, eventually culminating in the grand finale – a simulated blue screen of deception, all in the name of injecting a touch of amusement into your day.
 
 ## Usage
 1. Choose a Windows version prank by clicking on the corresponding image.
@@ -20,7 +21,7 @@ This repository contains a simple prank website that mimics the appearance of Wi
 4. After the fake update completes, a fake Blue Screen of Death (BSOD) will appear, revealing the prank to your friends.
 
 ## Available Options
-> NOTE: Windows 8, 10 and 11 Update screens are not finished and not uploaded yet
+> NOTE: Please note that Windows 8, 10, and 11 update screens are currently under development and not yet available.
 
 | Windows XP | Windows Vista | Windows 7 |
 |:---:|:---:|:---:|
